@@ -1,0 +1,33 @@
+$input-border: 1.65rem;
+
+.search {
+  position: relative;
+  &__input {
+    font-family: inherit;
+    font-size: 1.8rem;
+    padding: 1rem 2rem 1rem 2rem;
+    border: none;
+    border-radius: $input-border;
+    background: #eee;
+    width: 100%;
+    &::placeholder {
+      color: #969090;
+    }
+
+    &:focus {
+      outline-color: #2196f3;
+    }
+    &:active {
+      outline: none;
+      border: none;
+    }
+  }
+
+  &__icon {
+    height: 22px;
+
+    &:active {
+      transform: translateY(2px);
+    }
+  }
+}
