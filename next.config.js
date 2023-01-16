@@ -1,5 +1,15 @@
 /** @type {import('next').NextConfig} */
 module.exports = {
+   async rewrites() {
+      return {
+         fallback: [
+            {
+               source: "/api/v1/:path*",
+               destination: `http://localhost:3001/api/v1/:path*`,
+            },
+         ],
+      };
+   },
    eslint: {
       dirs: ["src"],
    },
@@ -9,4 +19,5 @@ module.exports = {
    images: {
       domains: ["placewaifu.com", "placecorgi.com", "cdn.myanimelist.net"],
    },
+   useFileSystemPublicRoutes: false,
 };
